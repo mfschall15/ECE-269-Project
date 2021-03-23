@@ -260,6 +260,6 @@ def actor_self(actor_num, center_model, data_queue, signal_queue, summary_queue,
                 
                 with open('./output.txt','w') as out:
                   out.write(score)
-            if steps >   
+            
 
 
