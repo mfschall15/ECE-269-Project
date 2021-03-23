@@ -181,7 +181,7 @@ def actor_self(actor_num, center_model, data_queue, signal_queue, summary_queue,
 
     n_epi = 0
     rollout = []
-    while True: # episode loop
+    while n_epi<1000: # episode loop
         opp_model_num, opp_model_path = select_opponent(arg_dict)
         checkpoint = torch.load(opp_model_path, map_location=cpu_device)
         opp_model.load_state_dict(checkpoint['model_state_dict'])
