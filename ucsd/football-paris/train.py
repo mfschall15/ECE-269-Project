@@ -121,7 +121,7 @@ if __name__ == '__main__':
         "summary_game_window" : 10, 
         "model_save_interval" : 300000,  # number of gradient updates bewteen saving model
 
-        "trained_model_path" : 'kaggle_simulations\agent\model_133997184.tar', # use when you want to continue traning from given model.
+        "trained_model_path" : '/content/football-paris/kaggle_simulations/agent/model_133997184.tar', # use when you want to continue traning from given model.
         "latest_ratio" : 0.5, # works only for self_play training. 
         "latest_n_model" : 10, # works only for self_play training. 
         "print_mode" : False,
