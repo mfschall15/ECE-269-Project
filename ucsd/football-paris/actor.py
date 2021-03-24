@@ -181,7 +181,7 @@ def actor_self(actor_num, center_model, data_queue, signal_queue, summary_queue,
 
     n_epi = 0
     rollout = []
-    while n_epi<200: # episode loop
+    while True: # episode loop
         opp_model_num, opp_model_path = select_opponent(arg_dict)
         checkpoint = torch.load(opp_model_path, map_location=cpu_device)
         opp_model.load_state_dict(checkpoint['model_state_dict'])
@@ -258,7 +258,7 @@ def actor_self(actor_num, center_model, data_queue, signal_queue, summary_queue,
                 summary_data = (win, score, tot_reward, steps, str(opp_model_num), loop_t/steps, forward_t/steps, wait_t/steps)
                 summary_queue.put(summary_data)  
                 
-                print(summary_data)
+                
                 with open('./output.txt','a') as out:
                   out.write(summary_data)
             
